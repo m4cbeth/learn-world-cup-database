@@ -142,3 +142,16 @@ __vsc_prompt_cmd_original
 ./insert_data.sh
 ./save.sh save
 git commit -am "getting there"
+git push
+./insert_data.sh
+__vsc_prompt_cmd_original
+\d games
+./insert_data.sh
+./queries.sh
+chmod +x queries.sh
+./queries.sh
+./queries.sh
+./queries.sh
+./save.sh save
+./save.sh save
+./save.sh save

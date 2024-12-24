@@ -134,6 +134,38 @@ ALTER TABLE ONLY public.teams ALTER COLUMN team_id SET DEFAULT nextval('public.t
 -- Data for Name: games; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.games VALUES (65, 2018, 123, 124, 4, 2, 'Final');
+INSERT INTO public.games VALUES (66, 2018, 125, 126, 2, 0, 'Third Place');
+INSERT INTO public.games VALUES (67, 2018, 124, 126, 2, 1, 'Semi-Final');
+INSERT INTO public.games VALUES (68, 2018, 123, 125, 1, 0, 'Semi-Final');
+INSERT INTO public.games VALUES (69, 2018, 124, 127, 3, 2, 'Quarter-Final');
+INSERT INTO public.games VALUES (70, 2018, 126, 128, 2, 0, 'Quarter-Final');
+INSERT INTO public.games VALUES (71, 2018, 125, 129, 2, 1, 'Quarter-Final');
+INSERT INTO public.games VALUES (72, 2018, 123, 130, 2, 0, 'Quarter-Final');
+INSERT INTO public.games VALUES (73, 2018, 126, 131, 2, 1, 'Eighth-Final');
+INSERT INTO public.games VALUES (74, 2018, 128, 132, 1, 0, 'Eighth-Final');
+INSERT INTO public.games VALUES (75, 2018, 125, 133, 3, 2, 'Eighth-Final');
+INSERT INTO public.games VALUES (76, 2018, 129, 134, 2, 0, 'Eighth-Final');
+INSERT INTO public.games VALUES (77, 2018, 124, 135, 2, 1, 'Eighth-Final');
+INSERT INTO public.games VALUES (78, 2018, 127, 136, 2, 1, 'Eighth-Final');
+INSERT INTO public.games VALUES (79, 2018, 130, 137, 2, 1, 'Eighth-Final');
+INSERT INTO public.games VALUES (80, 2018, 123, 138, 4, 3, 'Eighth-Final');
+INSERT INTO public.games VALUES (81, 2014, 139, 138, 1, 0, 'Final');
+INSERT INTO public.games VALUES (82, 2014, 140, 129, 3, 0, 'Third Place');
+INSERT INTO public.games VALUES (83, 2014, 138, 140, 1, 0, 'Semi-Final');
+INSERT INTO public.games VALUES (84, 2014, 139, 129, 7, 1, 'Semi-Final');
+INSERT INTO public.games VALUES (85, 2014, 140, 141, 1, 0, 'Quarter-Final');
+INSERT INTO public.games VALUES (86, 2014, 138, 125, 1, 0, 'Quarter-Final');
+INSERT INTO public.games VALUES (87, 2014, 129, 131, 2, 1, 'Quarter-Final');
+INSERT INTO public.games VALUES (88, 2014, 139, 123, 1, 0, 'Quarter-Final');
+INSERT INTO public.games VALUES (89, 2014, 129, 142, 2, 1, 'Eighth-Final');
+INSERT INTO public.games VALUES (90, 2014, 131, 130, 2, 0, 'Eighth-Final');
+INSERT INTO public.games VALUES (91, 2014, 123, 143, 2, 0, 'Eighth-Final');
+INSERT INTO public.games VALUES (92, 2014, 139, 144, 2, 1, 'Eighth-Final');
+INSERT INTO public.games VALUES (93, 2014, 140, 134, 2, 1, 'Eighth-Final');
+INSERT INTO public.games VALUES (94, 2014, 141, 145, 2, 1, 'Eighth-Final');
+INSERT INTO public.games VALUES (95, 2014, 138, 132, 1, 0, 'Eighth-Final');
+INSERT INTO public.games VALUES (96, 2014, 125, 146, 2, 1, 'Eighth-Final');
 
 
 --
@@ -170,7 +202,7 @@ INSERT INTO public.teams VALUES (146, 'United States');
 -- Name: games_game_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.games_game_id_seq', 32, true);
+SELECT pg_catalog.setval('public.games_game_id_seq', 96, true);
 
 
 --
@@ -178,14 +210,6 @@ SELECT pg_catalog.setval('public.games_game_id_seq', 32, true);
 --
 
 SELECT pg_catalog.setval('public.teams_team_id_seq', 146, true);
-
-
---
--- Name: games games_name_key; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
---
-
-ALTER TABLE ONLY public.games
-    ADD CONSTRAINT games_name_key UNIQUE (year);
 
 
 --
