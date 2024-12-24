@@ -83,3 +83,15 @@ mv scripts.sh save.sh
 ./save.sh loadf
 ./save.sh save
 ./save.sh save
+./insert_data.sh
+chmod +x insert_data.sh
+./insert_data.sh
+./insert_data.sh
+./insert_data.sh
+./insert_data.sh
+./insert_data.sh
+./insert_data.sh
+cp games.csv gamestest.csv
+chmod +rw gametest.csv
+chmod +rw gamestest.csv
+ls --color=auto -l
