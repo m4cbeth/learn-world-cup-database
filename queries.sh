@@ -15,31 +15,33 @@ echo -e "\nTotal number of goals in all games from both teams combined:"
 echo "$($PSQL "SELECT SUM(winner_goals) + SUM(opponent_goals) AS total FROM games")"
 
 echo -e "\nAverage number of goals in all games from the winning teams:"
-echo
+echo "$($PSQL "SELECT AVG(winner_goals) FROM games")"
 
-# echo -e "\nAverage number of goals in all games from the winning teams rounded to two decimal places:"
-# echo
+echo -e "\nAverage number of goals in all games from the winning teams rounded to two decimal places:"
+echo "$($PSQL "SELECT ROUND(AVG(winner_goals), 2) FROM games")"
 
-# echo -e "\nAverage number of goals in all games from both teams:"
-# echo
+echo -e "\nAverage number of goals in all games from both teams:"
+echo "$($PSQL "SELECT AVG(winner_goals + opponent_goals) FROM games")"
 
-# echo -e "\nMost goals scored in a single game by one team:"
-# echo
+echo -e "\nMost goals scored in a single game by one team:"
+echo "$($PSQL "SELECT MAX(winner_goals) FROM games")"
 
-# echo -e "\nNumber of games where the winning team scored more than two goals:"
-# echo
+echo -e "\nNumber of games where the winning team scored more than two goals:"
+echo "$($PSQL "SELECT COUNT(game_id) FROM games WHERE winner_goals > 2")"
 
-# echo -e "\nWinner of the 2018 tournament team name:"
-# echo
+echo -e "\nWinner of the 2018 tournament team name:"
+echo "$($PSQL "SELECT g.year, t1.name AS winner_name FROM games g
+ JOIN teams t1 ON g.winner_id = t1.team_id WHERE g.year = 2018 AND round = 'Final'")"
 
 # echo -e "\nList of teams who played in the 2014 'Eighth-Final' round:"
-# echo
+# echo "$($PSQL "SELECT *")"
 
-# echo -e "\nList of unique winning team names in the whole data set:"
-# echo
+echo -e "\nList of unique winning team names in the whole data set:"
+echo "$($PSQL "SELECT DISTINCT(t1.name) FROM games JOIN teams t1 ON winner_id = t1.team_id")"
 
-# echo -e "\nYear and team name of all the champions:"
-# echo
+echo -e "\nYear and team name of all the champions:"
+echo "$($PSQL "SELECT year, t1.name FROM games JOIN teams t1 ON winner_id = t1.team_id WHERE round='Final'")"
 
-# echo -e "\nList of teams that start with 'Co':"
-# echo
+
+echo -e "\nList of teams that start with 'Co':"
+echo "$($PSQL "")"
