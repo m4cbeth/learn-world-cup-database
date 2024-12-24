@@ -82,3 +82,4 @@ mv scripts.sh save.sh
 ./save.sh load
 ./save.sh loadf
 ./save.sh save
+./save.sh save

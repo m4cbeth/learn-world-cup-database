@@ -53,7 +53,8 @@ CREATE TABLE public.games (
     winner_id integer NOT NULL,
     opponent_id integer NOT NULL,
     winner_goals integer NOT NULL,
-    opponent_goals integer NOT NULL
+    opponent_goals integer NOT NULL,
+    round character varying NOT NULL
 );
 
 
