@@ -210,3 +210,5 @@ __vsc_original_prompt_command=${PROMPT_COMMAND:-}
 ./queries.sh
 ./queries.sh
 ./queries.sh
+./save.sh
+./save.sh save
